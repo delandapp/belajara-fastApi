@@ -7,16 +7,16 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-tags_metadata = [
-    {
-        "name": "Blog",
-        "description": "Operations with blog",
-    },
-    {
-        "name": "User",
-        "description": "Operations with user",
-    },
-]
+# tags_metadata = [
+#     {
+#         "name": "Blog",
+#         "description": "Operations with blog",
+#     },
+#     {
+#         "name": "User",
+#         "description": "Operations with user",
+#     },
+# ]
 
 app.include_router(blog.router)
 app.include_router(user.router)
